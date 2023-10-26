@@ -1,0 +1,70 @@
+footer{
+    height: 222px;
+    article{
+        padding: 50px 160px;
+        display: flex;
+        justify-content: space-between;
+        .foor_lt{
+            .copy_map{
+                @include flexLayout(row, flex-start, center);
+                margin-top: 5px;
+                margin-bottom: 10px;
+                font-size: 12px;
+                .copy{
+                    background: url(/images/common/foot_icon_copy.svg) no-repeat center left;
+                    margin-right: 12px;
+                    padding-left: 16px;
+                    border: none;
+                    font-size: 12px;
+                }
+                a{
+                    display: inline-block;
+                    padding-left: 14px;
+                    background: url(/images/common/foot_icon_map.svg) no-repeat center left;
+                }
+            }
+            .sns_link{
+                display: inline-block;
+                margin-top: 10px;
+            }
+        }
+        .foot_rt{
+            text-align: right;
+            p{
+                color: #65717B;
+                img{
+                    vertical-align: baseline;
+                    margin-left: 20px;
+                }
+                &:first-child{
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .intro_file{
+            display: inline-block;
+            width: 100px;
+            height: 24px;
+            border: 1px solid #001322;
+            line-height: 1.5;
+            border-radius: 3px;
+            margin-top: 10px;
+            padding-left: 13px;
+            text-align: center;
+            background: url(/images/common/foot_icon_down.svg) no-repeat 10% 50%;
+        }
+        .left_bd{
+            display: inline-block;
+            position: relative;
+            margin-left: 16px;
+            &::before{
+                content: '';
+                @include positionLayout(absolute, y);
+                background: #65717B;
+                width: 1px;
+                height: 12px;
+                left: -8px;
+            }
+        }
+    }
+}

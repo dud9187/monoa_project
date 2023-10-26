@@ -1,0 +1,41 @@
+header{
+    opacity: 0;
+    position: fixed;
+    z-index: 999;
+    @include flexLayout(row, space-between, center);
+    width: 100%;
+    height: 94px;
+    padding: 0 60px;
+    ul{
+        @include flexLayout(row, space-between, center);
+        li{
+            &:first-child{
+                position: relative;
+                &::before{
+                    @include positionLayout(absolute, y);
+                    right: 0;
+                    content: '';
+                    width: 2px;
+                    height: 14px;
+                    background: #001322;
+                }
+                a{
+                    padding-left: 0;
+                }
+            }
+            a{
+                display: block;
+                color: #001322;
+                padding: 0 10px;
+            }
+            &.header_mn_btn{
+                a{
+                    width: 45px;
+                    height: 36px;
+                    background: url(/images/common/header_menu.png) no-repeat right;
+                    background-size: 36px 36px;
+                }
+            }
+        }
+    }
+}
